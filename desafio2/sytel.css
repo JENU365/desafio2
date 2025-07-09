@@ -1,56 +1,107 @@
-body{
-    background-color: aquamarine;
-
-}
-section {
-  width: 300px;
-  padding: 35px;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: auto;
+body {
+  margin: 0;
   font-family: Arial, sans-serif;
+  background: #e5f4fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-/* Título */
-h1 {
-  font-size: 18px;
-  text-align: center;
-  margin-bottom: 20px;
+.container {
+  display: flex;
+  gap: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 
-/* Estilo de las etiquetas */
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 14px;
+.calculator {
+  width: 300px;
 }
 
-/* Estilo de los campos de entrada */
-input[type="number"], input[type="checkbox"] {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
+.calculator h1 {
+  font-size: 20px;
 }
 
-/* Casillas de verificación (checkbox) */
-input[type="checkbox"] {
-  width: auto;
-  margin-right: 5px;
-}
-
-/* Estilo para el texto de "Clear All" */
-p {
-  text-align: center;
-  font-size: 14px;
+.clear {
   color: #007bff;
   cursor: pointer;
+  font-size: 14px;
 }
 
-p:hover {
+.clear:hover {
   text-decoration: underline;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.inline-inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  background: #c8e000;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #b5cc00;
+}
+
+.results {
+  background: #0f2c3f;
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+}
+
+.results h2 {
+  margin-top: 0;
+}
+
+.monthly {
+  font-size: 28px;
+  font-weight: bold;
+  color: #c8e000;
+}
+
+.total {
+  font-weight: bold;
+}
+
+.info {
+  font-size: 14px;
+  margin-bottom: 5px;
 }

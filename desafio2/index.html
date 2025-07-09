@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <title>Frontend Mentor | Mortgage repayment calculator</title>
-  <link rel="stylesheet" href="sytel.css">
-  <style>
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mortgage Calculator</title>
+  <link rel="stylesheet" href="sytel.css" />
 </head>
 <body>
+  <div class="container">
+    <div class="calculator">
+      <h1>Mortgage Calculator</h1>
+      <p class="clear">Clear All</p>
+      <form id="mortgage-form">
+        <label for="amount">Mortgage Amount</label>
+        <input id="amount" type="number" placeholder="300000" />
 
+        <label for="term">Mortgage Term</label>
+        <div class="inline-inputs">
+          <input id="term" type="number" placeholder="25" />
+          <span>years</span>
+        </div>
 
-<section>
-  <article>
-    <h1>Mortgage Calculator</h1>
-        <p>Clear All</p>
-        <form action="">
-          <label for="amount">Mortgage Amount</label>
-          <input id="amount" type="number">
-          <label for="term">Mortgage Term</label>
-          <input id="term" type="number">
-          <label for="rate">Interest Rate</label>
-          <input id="rate" type="number">
-          <label>Mortgage Type</label>
-          <input id="type1" type="checkbox">
-          <label for="type1">Repayment</label>
-          <input id="type2" type="checkbox">
-          <label for="type2">Interest Only</label>
-      
+        <label for="rate">Interest Rate</label>
+        <div class="inline-inputs">
+          <input id="rate" type="number" placeholder="5.25" step="0.01" />
+          <span>%</span>
+        </div>
+
+        <label>Mortgage Type</label>
+        <div class="radio-group">
+          <input type="radio" name="type" id="repayment" value="repayment" checked />
+          <label for="repayment">Repayment</label>
+          <input type="radio" name="type" id="interest" value="interest" />
+          <label for="interest">Interest Only</label>
+        </div>
+
+        <button type="submit">Calculate Repayments</button>
       </form>
+    </div>
 
-  </article>
-  <article></article>
-</section>
+    <div class="results">
+      <h2>Your results</h2>
+      <p class="info">Your monthly repayments</p>
+      <p class="monthly" id="monthly">£0.00</p>
+      <hr />
+      <p class="info">Total you'll repay over the term</p>
+      <p class="total" id="total">£0.00</p>
+    </div>
+  </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
